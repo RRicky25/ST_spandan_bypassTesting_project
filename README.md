@@ -2,11 +2,11 @@
 Client-side web applications testing (bypass testing): Projects that involve testing of client side code of a web application by designing test cases that bypass client-side validation and sending changed/corrupt input to the server.
 
 ## Designed testcases
-All the designed test cases for various forms can be found in the json files located [here](testingScripts/testing/PostmanCollectionTest/src/main/java/com/example). Each json file contains various testcases for a single form.
+All the designed test cases for various forms can be found in the json files located [here](testing_scripts/testing/PostmanCollectionTest/src/main/java/com/example). Each json file contains various testcases for a single form.
 
 ## Instructions for running test script
 - First setup your spand backend with backend running at port 8000.
-- Navigate to [PostmanCollectionTest Folder](testingScripts/testing/PostmanCollectionTest) where you can find the java maven project for testing.
+- Navigate to [PostmanCollectionTest Folder](testing_scripts/testing/PostmanCollectionTest) where you can find the java maven project for testing.
 - Add any extra scenarios that you want to test in the corresponding json files.
 - run:
 ```
