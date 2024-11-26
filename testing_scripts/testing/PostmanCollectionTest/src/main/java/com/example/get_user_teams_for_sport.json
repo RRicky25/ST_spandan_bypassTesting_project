@@ -1,0 +1,40 @@
+{
+    "testCases": [
+      {
+        "scenario": "Valid Request",
+        "params": {
+          "email": "ricky.ratnani@iiitb.ac.in",
+          "sport_name": "Badminton-MS"
+        }
+      },
+      {
+        "scenario": "Invalid Email",
+        "params": {
+          "email": "./invalid.email../iiitb.ac.in",
+          "sport_name": "Badminton-MS"
+        }
+      },
+      {
+        "scenario": "Invalid Sport name",
+        "params": {
+          "email": "ricky.ratnani@iiitb.ac.in",
+          "sport_name": "hello123"
+        }
+      },
+      {
+        "scenario": "empty email",
+        "params": {
+          "email": "",
+          "sport_name": "Badminton-MS"
+        }
+      },
+      {
+        "scenario": "empty Sport name",
+        "params": {
+          "email": "ricky.ratnani@iiitb.ac.in",
+          "sport_name": ""
+        }
+      }
+    ]
+  }
+  

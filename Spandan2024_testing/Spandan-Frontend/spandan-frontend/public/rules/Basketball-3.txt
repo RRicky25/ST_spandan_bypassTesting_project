@@ -1,0 +1,17 @@
+• Team:
+    - Each team will consist of 4 players(3 on court and 1 substitute). o Coin flip to determine the initial possession.
+• Game:
+    - 1 point for all shots made from inside the arc.
+    - 2 points for all shots made outside the arc.
+    - Successful Free throw is worth 1 point.
+    - Playing time of 10 minutes per game. Game clock will be stopped during dead ball situations and free throws.
+    - First team to 21 points wins, if it scores 21 in the regulated time otherwise the team with greater score wins.
+    - If score is tied then first team to score 2 points in overtime wins the game. 
+• Fouls:
+    - A team is in penalty situation after it has committed 6 fouls. o If a team is in penalty situation, for every foul it commits the opponents are awarded 2 free throws.
+    - If a team has committed more than 9 fouls i.e., from the 10th foul onwards the opponent team is awarded 2 free throws and the possession of the ball.
+    - After a team has scored... the non scoring team shall resume the game by dribbling or passing the ball from inside the court directly underneath the basket to a place on the court behind the arc.
+    - The defensive player is not allowed to play for the ball in the “no charge semicircle area” underneath the basket.
+    - For each unsuccessful attempt the offensive player can rebound the ball and may continue to attempt to score without returning the ball behind the arc. If the defensive player rebounds the ball then it should be taken beyond the arc before attempting to score again.
+    - The game after any dead ball situation shall resume with a check- ball(exchange of ball between the teams beyond the arc).
+    - Unlimited substitutions possible, during any dead ball situation.

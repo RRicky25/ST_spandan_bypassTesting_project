@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "3eea81f8-6e53-479f-8d70-6726deecb381",
+		"name": "login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23044416",
+		"_collection_link": "https://interstellar-eclipse-583100.postman.co/workspace/spandan_api_testing~30c3a441-f7a4-4da0-9cb7-1ebfc462b83b/collection/23044416-3eea81f8-6e53-479f-8d70-6726deecb381?action=share&source=collection_link&creator=23044416"
+	},
+	"item": [
+		{
+			"name": "token_request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ricky.ratnani@iiitb.ac.in\", \n    \"password\": \"willTop2023\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_details_request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzMzA3MjEwLCJpYXQiOjE3MzI0NDMyMTAsImp0aSI6IjE2YmZmNTk5ZjdiYjQwMGI5ZGQ1NGIyMmY4Nzg5M2QwIiwidXNlcl9pZCI6MzM0fQ.saan9vCr6GZWoVHa0q3YL3Phljc3f0NEHJ9EerxuQvk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/user/create/?email=ricky.ratnani%40iiitb.ac.in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"create",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "ricky.ratnani%40iiitb.ac.in"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

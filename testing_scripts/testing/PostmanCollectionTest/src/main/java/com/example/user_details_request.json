@@ -1,0 +1,17 @@
+{
+    "testCases": [
+      {
+        "scenario": "Valid Email",
+        "email": "ricky.ratnani@iiitb.ac.in"
+      },
+      {
+        "scenario": "Invalid Email",
+        "email": "invalid.././%&*emailiiitb.ac.in"
+      },
+      {
+        "scenario": "Empty Email",
+        "email": ""
+      }
+    ]
+  }
+  

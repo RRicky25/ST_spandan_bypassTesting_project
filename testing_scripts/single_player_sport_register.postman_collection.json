@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "35cb7456-177f-4156-a545-833b3701ab6d",
+		"name": "single_player_sport_register",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23044416",
+		"_collection_link": "https://interstellar-eclipse-583100.postman.co/workspace/spandan_api_testing~30c3a441-f7a4-4da0-9cb7-1ebfc462b83b/collection/23044416-35cb7456-177f-4156-a545-833b3701ab6d?action=share&source=collection_link&creator=23044416"
+	},
+	"item": [
+		{
+			"name": "get_user_teams_for_sport",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzMzA3MjEwLCJpYXQiOjE3MzI0NDMyMTAsImp0aSI6IjE2YmZmNTk5ZjdiYjQwMGI5ZGQ1NGIyMmY4Nzg5M2QwIiwidXNlcl9pZCI6MzM0fQ.saan9vCr6GZWoVHa0q3YL3Phljc3f0NEHJ9EerxuQvk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/team/?email=ricky.ratnani%40iiitb.ac.in&sport_name=Badminton-MS",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"team",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "ricky.ratnani%40iiitb.ac.in"
+						},
+						{
+							"key": "sport_name",
+							"value": "Badminton-MS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_player_by_rollnumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/user/getuserbyroll/?rollNum=IMT2021030",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"getuserbyroll",
+						""
+					],
+					"query": [
+						{
+							"key": "rollNum",
+							"value": "IMT2021030"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_team",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzMzA3MjEwLCJpYXQiOjE3MzI0NDMyMTAsImp0aSI6IjE2YmZmNTk5ZjdiYjQwMGI5ZGQ1NGIyMmY4Nzg5M2QwIiwidXNlcl9pZCI6MzM0fQ.saan9vCr6GZWoVHa0q3YL3Phljc3f0NEHJ9EerxuQvk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"blasters\",\"sports\":\"Badminton-MS\",\"members\":[{\"email\":\"ricky.ratnani@iiitb.ac.in\",\"user_name\":\"Ricky Ashokkumar Ratnani\",\"gender\":\"m\",\"rollNum\":\"IMT2021030\",\"id\":334,\"sex\":\"male\"}],\"team_size\":1,\"phoneNum\":\"9429525818\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/team/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"team",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

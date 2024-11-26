@@ -1,0 +1,58 @@
+You must know the basic moves of chess
+● Format is Knockout rounds followed by Round Robin (tentative)
+no. of Knockout rounds will be disclosed after the registration forms are closed.
+(PS: In knockouts players will play only 1 match with their seed, the colour is computer generated)
+● Each player is assigned a fixed amount of time for the whole game. If a player's
+main time expires, they lose the game.
+● Duration of the game will be decided on the day of the tournament.
+Touch to move
+● Once a piece is released, it cannot be taken back.
+● Note : The usual touch to move rule(According to FIDE) is not used.
+Castling
+● It must be that king's very first move
+● It must be that rook's very first move
+● There cannot be any pieces between the king and rook to move
+● The king must not be in check or pass through check
+En Passant
+When a pawn advances two squares from its original square and ends the turn adjacent to a pawn
+of the opponent's on the same rank, it may be captured by that pawn of the opponent's, as if it had
+moved only one square forward. This capture is only legal on the opponent's next move
+immediately following the first pawn's advance.
+Pawn promotion
+If a player advances a pawn to its eighth rank, the pawn is then promoted (converted) to a queen,
+rook, bishop, or knight of the same colour at the choice of the player (a queen is usually chosen).
+The choice is not limited to previously captured pieces. Hence it is theoretically possible for a
+player to have up to nine queens or up to ten rooks, bishops, or knights if all of their pawns are
+promoted. If the desired piece is not available, the player should call the arbiter to provide the piece
+Check and Checkmate
+The purpose of the game is to checkmate the opponent's king. This happens when the king is put
+into check and cannot get out of check.
+There are only three ways a king can get out of check:
+● move out of the way (though he cannot castle!)
+● block the check with another piece or
+● capture the piece threatening the king.Illegal move
+● Not noticing check.
+● Moving a pinned piece, pinned to the king.
+● Capturing the King.
+● Not following any of the rules mentioned above.
+Penalty for Illegal move : For the first illegal move by a player the arbiter shall give two minutes
+extra time to his opponent; for a second illegal move by the same player, the arbiter shall declare
+the game lost by this player.
+Draw possibilities:
+● The position reaches a stalemate where it is one player's turn to move, but his king is NOT in
+check and yet he does not have another legal move:
+● The players may simply agree to a draw and stop playing
+● There are not enough pieces on the board to force a checkmate (example: a king vs a king, a
+knight and king vs a king , a bishop and king vs a king)
+● A player declares a draw if the same exact position is repeated three times (though not
+necessarily three times in a row)
+● Fifty consecutive moves have been played where neither player has promoted a pawn or
+captured a piece.
+Draw-breaker
+There will be a rematch with the following rules.
+(It is an Armageddon, where white has extra time but black has draw odds)
+● Both players can auction the time they are willing to play with the black pieces and also the time
+difference(i.e How much additional time does the white pieces get), the player bidding the lesser
+time will play the black pieces.
+● If the draw-breaker result is a draw, black wins.
+In case of any disputes, SPOC decision is final.

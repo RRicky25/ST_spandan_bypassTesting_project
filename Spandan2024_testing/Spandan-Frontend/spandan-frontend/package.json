@@ -1,0 +1,50 @@
+{
+  "name": "spandan-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.5.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/akshar": "^5.0.12",
+    "@fontsource/archivo": "^5.0.17",
+    "@fontsource/vt323": "^4.5.10",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "axios": "^1.3.4",
+    "formik": "^2.2.9",
+    "framer-motion": "^6.5.1",
+    "react": "^18.2.0",
+    "react-18-blockies": "^1.0.6",
+    "react-dom": "^18.2.0",
+    "react-icons": "^3.11.0",
+    "react-router-dom": "^6.8.2",
+    "react-scripts": "5.0.1",
+    "react-super-seo": "^1.1.3",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

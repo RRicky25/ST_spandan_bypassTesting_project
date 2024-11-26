@@ -1,0 +1,28 @@
+The below mentioned rules are applicable to men's doubles, women's doubles and mixed doubles.
+
+Service:
+The service is exactly the same as in singles with one exception. Instead of the ball bouncing anywhere on the table, it must bounce only on the right half portion of the table for both the server and the receiver. (Right Cross Court)
+
+Sequence of Game Play:
+The server shall first make a service, the receiver shall return the ball, then the partner of the server shall return, then the partner of the receiver shall return and thereafter each player in turn in that sequence shall return hit the ball.
+
+Example: A&B vs X&Y
+    ➢ Player A serves to player X who then returns the ball. Player B must then play the next shot and player Y must return the ball hit by B and so on.
+        A->X->B->Y->A->......
+        If a team is unable to follow this order, then a point will be given to the opponent team.
+    ➢ Before the start of a doubles match, the pair having the right to serve first shall choose who among the two of them will serve and the receiving pair shall decide who among the two of them will receive first and the side of the table they want to start the play from.
+    ➢ In subsequent sets of the match, after the server is chosen, the receiver will be the player who served to the chosen server in the preceding set.
+    ➢ At the start of the match, let's assume A decides serve first and X elects to receive first. Start of Set 1: A serves to X
+    Start of Set 2: X serves to A
+    Start of Set 3: B serves to Y
+    Start of Set 4: Y serves to B Start of Set 5: A serves to X
+
+Scoring:
+    ➢ The matches before the round of 8 will consist of three sets of 11 points each (extended to deuce if necessary). The team which wins the maximum number of sets (2 out of 3) will be the winner of the match.
+    ➢ The matches in the round of 8 (quarterfinals), semifinals, and finals will consist of 5 sets of 11 points each (extended to deuce if necessary). The team which wins the maximum number of sets (3 out of 5) will be the winner of the match.
+    ➢ Deciding set: If the game goes to the deciding set, after five points are scored by any of the team, the teams shall switch the ends of the table and also the receiving pair must change their order of receiving.
+    
+EXTREME CASES OF MISCONDUCT
+    ➢ In extreme cases, the player at fault will be given a warning followed by a disqualification from all table tennis events of Spandan 2022.
+    ➢ The power to execute this lies with the SPOCs. Both the SPOCs have to agree before disqualifying a player from the tournament.
+    ➢ During severe cases of rule violation or misbehaviour, the player may directly dis-qualified from all the table tennis events of the fest without a warning.

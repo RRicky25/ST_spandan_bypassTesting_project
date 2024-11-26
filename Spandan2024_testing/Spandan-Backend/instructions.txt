@@ -1,0 +1,44 @@
+Contains instruction as steps which needs to be carried out before anything else for making the backend server operational.
+
+
+1) 
+run npm install -r requirements.txt
+- If error occurs because of mysqlclient then first try running this command : sudo apt-get install python3-dev default-libmysqlclient-dev build-essential     and    then retry the installation of mysqlclient.
+- Basically anyhow install mysql client.
+
+
+2)
+- In your mysql create a new database which is supposed to store the data. eg name = database_name
+            CREATE DATABASE database_name;
+- Create a new user with a strong password. Then grant all privileges for the above created database to  this user.
+        CREATE USER 'username'@'localhost' IDENTIFIED BY 'password'; 
+        GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'localhost';
+NOTE: here hostname = localhost is used. Change the localhost to handle other hosts.
+
+
+3)
+In the settings.py which is located in spandan app, change the database credentials with the credentials created above.
+  
+4)
+run python3 manage.py migrate.
+- This will create all the schemas in your database.
+
+
+5) Dumping the users in the data base
+Install pandas if not already installed.
+Install openpyxl if not already installed.
+- run python3 dump_users.py
+
+
+6)  Add the sports_teams details in the database.
+Temporarily run the server using command like python3 manage.py runserver.
+Now open another termianl and run python3 teams.py
+- Basically teams.py send the post request to the server to add the sports_team details.
+
+
+7) Currently for sending the email in settings.py my credentials are given.
+Change the credentials to like spandan.iiitb.ac.in  as required.
+
+
+8)
+In spandan/users/models.py  at the very end in password_reset_token_created in email_plaintext_message currently http://localhost/change/{} is used. Instead of that use the url being used. Like the previous time it was http://spandan.iiitb.ac.in/change/{}".format(reset_password_token.key)

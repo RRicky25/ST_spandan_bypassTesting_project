@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "fa5695b9-6359-4092-bb3c-0822c71c2e63",
+		"name": "double_player_sport_register",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23044416",
+		"_collection_link": "https://interstellar-eclipse-583100.postman.co/workspace/spandan_api_testing~30c3a441-f7a4-4da0-9cb7-1ebfc462b83b/collection/23044416-fa5695b9-6359-4092-bb3c-0822c71c2e63?action=share&source=collection_link&creator=23044416"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzMzA3MjEwLCJpYXQiOjE3MzI0NDMyMTAsImp0aSI6IjE2YmZmNTk5ZjdiYjQwMGI5ZGQ1NGIyMmY4Nzg5M2QwIiwidXNlcl9pZCI6MzM0fQ.saan9vCr6GZWoVHa0q3YL3Phljc3f0NEHJ9EerxuQvk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"blaster_again\",\n    \"sports\":\"Badminton-MD\",\n    \"members\":[\n        {\n            \"email\":\"ricky.ratnani@iiitb.ac.in\",\n            \"user_name\":\"Ricky Ashokkumar Ratnani\",\n            \"gender\":\"m\",\n            \"rollNum\":\"IMT2021030\",\n            \"id\":334,\n            \"sex\":\"male\"\n        },\n        {\n            \"email\":\"dhairya.gupta@iiitb.ac.in\",\n            \"user_name\":\"Dhairya Gupta \",\n            \"gender\":\"m\",\n            \"rollNum\":\"IMT2021005\",\n            \"id\":296,\n            \"sex\":\"male\"\n        }\n    ],\n    \"team_size\":2,\n    \"phoneNum\":\"9429525818\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/team/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"team",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

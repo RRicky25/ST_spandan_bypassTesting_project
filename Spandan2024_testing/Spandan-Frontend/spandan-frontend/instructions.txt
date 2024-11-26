@@ -1,0 +1,7 @@
+Contains instruction as steps which needs to be carried out before anything else for making the frontend operational.
+
+1.) run npm i in spandan-frontend/ directory.This installs all the required node-modules.
+
+2.) go to axiosconfig.js in src/ directory and replace 'http://localhost:8000/api' with the corresponding url for the backend server like spandan.iiitb.ac.in/api or anything as such.
+
+3.) after making sure the backend is up and running, run npm start to start the front-end at 'localhost:3000'.
