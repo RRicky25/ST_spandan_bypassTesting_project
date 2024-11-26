@@ -14,3 +14,7 @@ All the designed test cases for various forms can be found in the json files loc
 - mvn exec:java -Dexec.mainClass="com.example.PostmanCollectionTester"
 ```
 - The above commands will send the requests based on all the variations provided in the json files and will print the responses of those requests which can then be observed and analysed.
+
+
+## Result images
+All the images for all the variations tried can be found [here](all_images)
