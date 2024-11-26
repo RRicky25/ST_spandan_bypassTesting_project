@@ -1,6 +1,10 @@
 ## Testing strategy selected
 Client-side web applications testing (bypass testing): Projects that involve testing of client side code of a web application by designing test cases that bypass client-side validation and sending changed/corrupt input to the server.
 
+## Tools used
+- Burp suite
+- Postman
+
 ## Designed testcases
 All the designed test cases for various forms can be found in the json files located [here](testing_scripts/testing/PostmanCollectionTest/src/main/java/com/example). Each json file contains various testcases for a single form.
 
