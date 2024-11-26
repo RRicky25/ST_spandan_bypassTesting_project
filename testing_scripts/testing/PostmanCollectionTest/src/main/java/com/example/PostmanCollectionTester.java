@@ -36,53 +36,40 @@ public class PostmanCollectionTester {
         // Base URI for the API
         RestAssured.baseURI = "http://localhost:8000";
 
-        // DONE-------------------------------------------------------------------------------------
         // Test the token request
-        // testTokenRequest();
-        // leave_gap(6);
+        testTokenRequest();
+        leave_gap(6);
 
-        // DONE-------------------------------------------------------------------------------------
         // Test the user details request
-        // String accessToken = getAccessToken();
-        // leave_gap(2);
-        // testUserDetailsRequest(accessToken);
-        // leave_gap(6);
+        String accessToken = getAccessToken();
+        leave_gap(2);
+        testUserDetailsRequest(accessToken);
+        leave_gap(6);
 
+        // Test getting the team info of a user
+        testGetUserTeamsForSport(accessToken);
+        leave_gap(6);
 
-        // DONE-------------------------------------------------------------------------------------
-        // // Test getting the team info of a user
-        // testGetUserTeamsForSport(accessToken);
-        // leave_gap(6);
+        // Test the search by roll number
+        testSearchPlayerByRollNumber();
+        leave_gap(6);
 
+        // Test the create team
+        testCreateTeam(accessToken);
+        leave_gap(6);
 
-        // DONE-------------------------------------------------------------------------------------
-        // // Test the search by roll number
-        // testSearchPlayerByRollNumber();
-        // leave_gap(6);
+        // Test deleting the team
+        testDeleteTeam(accessToken);
+        leave_gap(6);
 
-        // DONE-------------------------------------------------------------------------------------
-        // // Test the create team
-        // testCreateTeam(accessToken);
-        // leave_gap(6);
-
-        // DONE-------------------------------------------------------------------------------------
-        // // Test deleting the team
-        // testDeleteTeam(accessToken);
-        // leave_gap(6);
-
-
-        // DONE-------------------------------------------------------------------------------------
         // testing password Reset request
-        // testPasswordResetRequest();
-        // leave_gap(6);
+        testPasswordResetRequest();
+        leave_gap(6);
 
-        // DONE-------------------------------------------------------------------------------------
-        // // testing get otp
-        // testGetOtp();
-        // leave_gap(6);
+        // testing get otp
+        testGetOtp();
+        leave_gap(6);
 
-
-        // DONE-------------------------------------------------------------------------------------
         // Scanner scanner = new Scanner(System.in);
         // // Prompt the user for the correct OTP
         // System.out.print("Enter the correct OTP for testing: ");
@@ -90,13 +77,12 @@ public class PostmanCollectionTester {
         // scanner.close();
         // testOtpVerification(correctOtp);
 
-
-        // DONE-------------------------------------------------------------------------------------
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the correct token: ");
-        String correctToken = scanner.nextLine(); // Prompt user for the correct token
-        testConfirmPasswordReset(correctToken);
-        scanner.close(); // Close the scanner to avoid resource leaks
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.print("Enter the correct token: ");
+        // String correctToken = scanner.nextLine(); // Prompt user for the correct
+        // token
+        // testConfirmPasswordReset(correctToken);
+        // scanner.close(); // Close the scanner to avoid resource leaks
     }
 
     private static void testTokenRequest() {

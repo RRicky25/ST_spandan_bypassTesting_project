@@ -1,0 +1,23 @@
+{
+    "testCases": [
+      {
+        "scenario": "Valid Email",
+        "requestBody": {
+          "email": "rickyratnani81@gmail.com"
+        }
+      },
+      {
+        "scenario": "Invalid Email Format",
+        "requestBody": {
+          "email": "rickyratnani81@asdf---asd"
+        }
+      },
+      {
+        "scenario": "Empty Email",
+        "requestBody": {
+          "email": ""
+        }
+      }
+    ]
+  }
+  

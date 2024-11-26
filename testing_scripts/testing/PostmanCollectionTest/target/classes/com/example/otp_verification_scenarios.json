@@ -1,0 +1,69 @@
+{
+    "testCases": [
+      {
+        "scenario": "Valid OTP and Data",
+        "requestBody": {
+          "user_name": "rickkky",
+          "email": "rickyratnani81@gmail.com",
+          "first_name": "Amar",
+          "password": "willTop2023",
+          "rollNum": "IMT2021030",
+          "otp": "%s"
+        }
+      },
+      {
+        "scenario": "Invalid OTP",
+        "requestBody": {
+          "user_name": "rickkky",
+          "email": "rickyratnani81@gmail.com",
+          "first_name": "Amar",
+          "password": "willTop2023",
+          "rollNum": "IMT2021030",
+          "otp": "12349873857956"
+        }
+      },
+      {
+        "scenario": "Missing OTP",
+        "requestBody": {
+          "user_name": "rickkky",
+          "email": "rickyratnani81@gmail.com",
+          "first_name": "Amar",
+          "password": "willTop2023",
+          "rollNum": "IMT2021030"
+        }
+      },
+      {
+        "scenario": "Invalid Email Format",
+        "requestBody": {
+          "user_name": "rickkky",
+          "email": "rickyratnani81@",
+          "first_name": "Amar",
+          "password": "willTop2023",
+          "rollNum": "IMT2021030",
+          "otp": "%s"
+        }
+      },
+      {
+        "scenario": "Empty Username",
+        "requestBody": {
+          "user_name": "",
+          "email": "rickyratnani81@gmail.com",
+          "first_name": "Amar",
+          "password": "willTop2023",
+          "rollNum": "IMT2021030",
+          "otp": "%s"
+        }
+      },
+      {
+        "scenario": "Missing Roll Number",
+        "requestBody": {
+          "user_name": "rickkky",
+          "email": "rickyratnani81@gmail.com",
+          "first_name": "Amar",
+          "password": "willTop2023",
+          "otp": "%s"
+        }
+      }
+    ]
+  }
+  

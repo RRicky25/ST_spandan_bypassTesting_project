@@ -1,0 +1,47 @@
+{
+    "scenarios": [
+      {
+        "name": "Valid Login",
+        "requestBody": {
+          "email": "ricky.ratnani@iiitb.ac.in",
+          "password": "willTop2023"
+        }
+      },
+      {
+        "name": "Invalid Email",
+        "requestBody": {
+          "email": "invalid.email@iiitb.ac.in",
+          "password": "willTop2023"
+        }
+      },
+      {
+        "name": "Empty Email",
+        "requestBody": {
+          "email": "",
+          "password": "willTop2023"
+        }
+      },
+      {
+        "name": "Wrong Password",
+        "requestBody": {
+          "email": "ricky.ratnani@iiitb.ac.in",
+          "password": "wrongPassword"
+        }
+      },
+      {
+        "name": "Empty password",
+        "requestBody": {
+          "email": "ricky.ratnani@iiitb.ac.in",
+          "password": ""
+        }
+      },
+      {
+        "name": "Wrong Special symbol password",
+        "requestBody": {
+          "email": "ricky.ratnani@iiitb.ac.in",
+          "password": "./abc*5"
+        }
+      }
+    ]
+  }
+  

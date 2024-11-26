@@ -1,0 +1,33 @@
+{
+    "testCases": [
+      {
+        "scenario": "Valid Team ID",
+        "requestBody": {
+          "id": 10
+        }
+      },
+      {
+        "scenario": "Non-existent Team ID",
+        "requestBody": {
+          "id": 999989890000938792385782935789
+        }
+      },
+      {
+        "scenario": "Negative Team ID",
+        "requestBody": {
+          "id": -1
+        }
+      },
+      {
+        "scenario": "Missing Team ID",
+        "requestBody": {}
+      },
+      {
+        "scenario": "Invalid Team ID Format",
+        "requestBody": {
+          "id": "invalid"
+        }
+      }
+    ]
+  }
+  

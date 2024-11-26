@@ -1,0 +1,21 @@
+{
+    "testCases": [
+      {
+        "scenario": "Valid Roll Number",
+        "rollNum": "IMT2021030"
+      },
+      {
+        "scenario": "Invalid Roll Number",
+        "rollNum": "INVALID123"
+      },
+      {
+        "scenario": "Long Roll Number",
+        "rollNum": ".././../asdfkj39487293857932857298357lskdf./%786234"
+      },
+      {
+        "scenario": "Empty Roll Number",
+        "rollNum": ""
+      }
+    ]
+  }
+    

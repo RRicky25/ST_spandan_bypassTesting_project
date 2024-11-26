@@ -1,0 +1,391 @@
+// private static void testTokenRequest() {
+// System.out.println("Testing Token Request...");
+// String endpoint = "/api/token/";
+// Map<String, String> requestBodyVariations = new HashMap<>();
+// requestBodyVariations.put("Valid Login",
+// "{\"email\": \"ricky.ratnani@iiitb.ac.in\", \"password\": \"willTop2023\"}");
+// requestBodyVariations.put("Invalid Email",
+// "{\"email\": \"invalid.email@iiitb.ac.in\", \"password\": \"willTop2023\"}");
+// requestBodyVariations.put("Wrong Password",
+// "{\"email\": \"ricky.ratnani@iiitb.ac.in\", \"password\":
+// \"wrongPassword\"}");
+
+// for (Map.Entry<String, String> entry : requestBodyVariations.entrySet()) {
+// String scenario = entry.getKey();
+// String requestBody = entry.getValue();
+
+// Response response = RestAssured.given()
+// .header("Content-Type", "application/json")
+// .body(requestBody)
+// .post(endpoint);
+
+// System.out.println("Scenario: " + scenario);
+// System.out.println("Status Code: " + response.getStatusCode());
+// System.out.println("Response: " + response.getBody().asString());
+// }
+// }
+
+// private static String getAccessToken2() {
+// System.out.println("Getting Token...");
+// String endpoint = "http://localhost:8000/api/token/"; // Ensure the full URL
+// is provided
+
+// // Request body with valid credentials
+// String requestBody = "{\"email\": \"ricky.ratnani@iiitb.ac.in\",
+// \"password\": \"willTop2023\"}";
+
+// // Send the POST request
+// Response response = RestAssured.given()
+// .header("Content-Type", "application/json")
+// .body(requestBody)
+// .post(endpoint);
+
+// // Check if the response is successful
+// if (response.getStatusCode() == 200) {
+// // Extract the "access" token from the JSON response
+// String accessToken = response.jsonPath().getString("access");
+// if (accessToken != null) {
+// System.out.println("Access token retrieved: " + accessToken);
+// return accessToken; // Return the token
+// } else {
+// System.out.println("Access token not found in the response.");
+// }
+// } else {
+// System.out.println("Failed to get the access token. Status Code: " +
+// response.getStatusCode());
+// }
+// // Return null if the token is not retrieved
+// return null;
+// }
+
+// private static void testUserDetailsRequest2(String accessToken) {
+
+// System.out.println("Testing User Details Request...");
+// String endpoint = "/api/user/create/";
+// String token = accessToken;
+
+// Map<String, String> queryParamVariations = new HashMap<>();
+// queryParamVariations.put("Valid Email", "ricky.ratnani@iiitb.ac.in");
+// queryParamVariations.put("Invalid Email", "invalid.email@iiitb.ac.in");
+
+// for (Map.Entry<String, String> entry : queryParamVariations.entrySet()) {
+// String scenario = entry.getKey();
+// String email = entry.getValue();
+
+// Response response = RestAssured.given()
+// .header("Authorization", "Bearer " + token)
+// .header("Content-Type", "application/json")
+// .queryParam("email", email)
+// .get(endpoint);
+
+// System.out.println("Scenario: " + scenario);
+// System.out.println("Status Code: " + response.getStatusCode());
+// System.out.println("Response: " + response.getBody().asString());
+// }
+// }
+
+// private static void testGetUserTeamsForSport2(String token) {
+// System.out.println("Testing: get_user_teams_for_sport...");
+
+// String endpoint = "http://localhost:8000/api/team/";
+// Map<String, Map<String, String>> scenarios = new HashMap<>();
+
+// // Define test scenarios with different query parameters
+// scenarios.put("Valid Request", Map.of(
+// "email", "ricky.ratnani@iiitb.ac.in",
+// "sport_name", "Badminton-MS"));
+// scenarios.put("Invalid Email", Map.of(
+// "email", "invalid.email@iiitb.ac.in",
+// "sport_name", "Badminton-MS"));
+
+// // THIS SCENARION IS GIVING BIG ERROR
+// // scenarios.put("Missing Sport Name", Map.of(
+// // "email", "ricky.ratnani@iiitb.ac.in"));
+
+// for (Map.Entry<String, Map<String, String>> entry : scenarios.entrySet()) {
+// String scenario = entry.getKey();
+// Map<String, String> params = entry.getValue();
+
+// System.out.println("Scenario: " + scenario);
+
+// Response response = RestAssured.given()
+// .header("Authorization", "Bearer " + token)
+// .queryParams(params)
+// .get(endpoint);
+
+// System.out.println("Status Code: " + response.getStatusCode());
+// System.out.println("Response Body: " + response.getBody().asString());
+// printDashedLine(60);
+// }
+// }
+
+// // Method to test "search_player_by_rollnumber" with variations
+// private static void testSearchPlayerByRollNumber2() {
+// System.out.println("Testing: search_player_by_rollnumber...");
+
+// String endpoint = "http://localhost:8000/api/user/getuserbyroll/";
+// Map<String, String> scenarios = new HashMap<>();
+
+// // Define test scenarios with different roll numbers
+// scenarios.put("Valid Roll Number", "IMT2021030");
+// scenarios.put("Invalid Roll Number", "INVALID123");
+// scenarios.put("Missing Roll Number", "");
+
+// for (Map.Entry<String, String> entry : scenarios.entrySet()) {
+// String scenario = entry.getKey();
+// String rollNum = entry.getValue();
+
+// System.out.println("Scenario: " + scenario);
+
+// Response response = RestAssured.given()
+// .queryParam("rollNum", rollNum)
+// .get(endpoint);
+
+// System.out.println("Status Code: " + response.getStatusCode());
+// System.out.println("Response Body: " + response.getBody().asString());
+// printDashedLine(60);
+// }
+// }
+
+
+
+// // Method to test "create_team" with variations
+// private static void testCreateTeam2(String token) {
+//     System.out.println("Testing: create_team...");
+
+//     String endpoint = "http://localhost:8000/api/team/";
+//     Map<String, String> scenarios = new HashMap<>();
+
+//     // Define test scenarios with different request bodies
+//     scenarios.put("Valid Request", "{"
+//             + "\"name\":\"blasters\","
+//             + "\"sports\":\"Badminton-MS\","
+//             + "\"members\":[{"
+//             + "\"email\":\"ricky.ratnani@iiitb.ac.in\","
+//             + "\"user_name\":\"Ricky Ashokkumar Ratnani\","
+//             + "\"gender\":\"m\","
+//             + "\"rollNum\":\"IMT2021030\","
+//             + "\"id\":334,"
+//             + "\"sex\":\"male\""
+//             + "}],"
+//             + "\"team_size\":1,"
+//             + "\"phoneNum\":\"9429525818\""
+//             + "}");
+
+//     scenarios.put("Missing Team Name", "{"
+//             + "\"sports\":\"Badminton-MS\","
+//             + "\"members\":[{"
+//             + "\"email\":\"ricky.ratnani@iiitb.ac.in\","
+//             + "\"user_name\":\"Ricky Ashokkumar Ratnani\","
+//             + "\"gender\":\"m\","
+//             + "\"rollNum\":\"IMT2021030\","
+//             + "\"id\":334,"
+//             + "\"sex\":\"male\""
+//             + "}],"
+//             + "\"team_size\":1,"
+//             + "\"phoneNum\":\"9429525818\""
+//             + "}");
+
+//     // THIS IS GIVING BIG ERROR
+//     // scenarios.put("Invalid Team Size", "{"
+//     // + "\"name\":\"blasters\","
+//     // + "\"sports\":\"Badminton-MS\","
+//     // + "\"members\":[],"
+//     // + "\"team_size\":-1,"
+//     // + "\"phoneNum\":\"9429525818\""
+//     // + "}");
+
+//     for (Map.Entry<String, String> entry : scenarios.entrySet()) {
+//         String scenario = entry.getKey();
+//         String requestBody = entry.getValue();
+
+//         System.out.println("Scenario: " + scenario);
+
+//         Response response = RestAssured.given()
+//                 .header("Authorization", "Bearer " + token)
+//                 .header("Content-Type", "application/json")
+//                 .body(requestBody)
+//                 .post(endpoint);
+
+//         System.out.println("Status Code: " + response.getStatusCode());
+//         System.out.println("Response Body: " + response.getBody().asString());
+//         printDashedLine(60);
+//     }
+// }
+
+
+// private static void testDeleteTeam2(String token) {
+//     System.out.println("Testing: delete_team...");
+
+//     String endpoint = "http://localhost:8000/api/team/";
+//     Map<String, String> scenarios = new HashMap<>();
+
+//     // Define test scenarios with different request bodies
+//     scenarios.put("Valid Team ID", "{\"id\":8}");
+//     scenarios.put("Non-existent Team ID", "{\"id\":999}");
+//     scenarios.put("Missing Team ID", "{}");
+//     scenarios.put("Invalid Team ID Format", "{\"id\":\"invalid\"}");
+
+//     for (Map.Entry<String, String> entry : scenarios.entrySet()) {
+//         String scenario = entry.getKey();
+//         String requestBody = entry.getValue();
+
+//         System.out.println("Scenario: " + scenario);
+
+//         Response response = RestAssured.given()
+//                 .header("Authorization", "Bearer " + token)
+//                 .header("Content-Type", "application/json")
+//                 .body(requestBody)
+//                 .delete(endpoint);
+
+//         // Print response details
+//         System.out.println("Status Code: " + response.getStatusCode());
+//         System.out.println("Response Body: " + response.getBody().asString());
+//         printDashedLine(60);
+//     }
+// }
+
+
+
+
+private static void testPasswordResetRequest2() {
+        System.out.println("Testing: password_reset_request...");
+
+        String endpoint = "http://localhost:8000/api/password_reset/";
+        Map<String, String> scenarios = new HashMap<>();
+
+        // Define test scenarios with different request bodies
+        scenarios.put("Valid Email", "{ \"email\": \"ricky.ratnani@iiitb.ac.in\" }");
+        scenarios.put("Non-Registered Email", "{ \"email\": \"nonexistent.email@example.com\" }");
+        scenarios.put("Invalid Email Format", "{ \"email\": \"invalid-email\" }");
+        scenarios.put("Missing Email", "{}");
+
+        for (Map.Entry<String, String> entry : scenarios.entrySet()) {
+            String scenario = entry.getKey();
+            String requestBody = entry.getValue();
+
+            System.out.println("Scenario: " + scenario);
+
+            Response response = RestAssured.given()
+                    .header("Content-Type", "application/json")
+                    .body(requestBody)
+                    .post(endpoint);
+
+            // Print response details
+            System.out.println("Status Code: " + response.getStatusCode());
+            System.out.println("Response Body: " + response.getBody().asString());
+            printDashedLine(60);
+        }
+    }
+
+
+    // Test for the get_otp endpoint
+    private static void testGetOtp2() {
+        System.out.println("Testing: get_otp...");
+
+        String endpoint = "http://localhost:8000/api/user/create/";
+        Map<String, String> scenarios = new HashMap<>();
+
+        // Test scenarios for get_otp
+        scenarios.put("Valid Email", "{ \"email\": \"rickyratnani81@gmail.com\" }");
+        scenarios.put("Invalid Email Format", "{ \"email\": \"rickyratnani81@\" }");
+        scenarios.put("Empty Email", "{ \"email\": \"\" }");
+
+        for (Map.Entry<String, String> entry : scenarios.entrySet()) {
+            String scenario = entry.getKey();
+            String requestBody = entry.getValue();
+
+            System.out.println("Scenario: " + scenario);
+
+            Response response = RestAssured.given()
+                    .header("Content-Type", "application/json")
+                    .body(requestBody)
+                    .post(endpoint);
+
+            // Print response details
+            System.out.println("Status Code: " + response.getStatusCode());
+            System.out.println("Response Body: " + response.getBody().asString());
+            printDashedLine(60);
+        }
+    }
+
+    private static void testConfirmPasswordReset2(String correctToken) {
+        System.out.println("Testing: confirm_password_reset...");
+
+        String endpoint = "http://localhost:8000/api/password_reset/confirm/";
+        Map<String, String> scenarios = new HashMap<>();
+
+        // Define test scenarios with placeholders for the correct token
+        scenarios.put("Valid Token and Password",
+                "{ \"password\": \"newPassword2023\", \"token\": \"%s\" }".formatted(correctToken));
+        scenarios.put("Expired Token", "{ \"password\": \"newPassword2023\", \"token\": \"expiredToken123\" }");
+        scenarios.put("Invalid Token", "{ \"password\": \"newPassword2023\", \"token\": \"invalidToken\" }");
+        scenarios.put("Missing Token", "{ \"password\": \"newPassword2023\" }");
+        scenarios.put("Missing Password", "{ \"token\": \"%s\" }".formatted(correctToken));
+        scenarios.put("Invalid Password Format",
+                "{ \"password\": \"short\", \"token\": \"%s\" }".formatted(correctToken));
+
+        for (Map.Entry<String, String> entry : scenarios.entrySet()) {
+            String scenario = entry.getKey();
+            String requestBody = entry.getValue();
+
+            System.out.println("Scenario: " + scenario);
+
+            Response response = RestAssured.given()
+                    .header("Content-Type", "application/json")
+                    .body(requestBody)
+                    .post(endpoint);
+
+            // Print response details
+            System.out.println("Status Code: " + response.getStatusCode());
+            System.out.println("Response Body: " + response.getBody().asString());
+            printDashedLine(60);
+        }
+    }
+
+    // Test for the otp_verification endpoint
+    private static void testOtpVerification2(int correctOtp) {
+        System.out.println("Testing: otp_verification...");
+
+        String endpoint = "http://localhost:8000/api/user/otp/verify/";
+        Map<String, String> scenarios = new HashMap<>();
+
+        // Convert correctOtp to a String for JSON insertion
+        String correctOtpStr = String.valueOf(correctOtp);
+
+        // Test scenarios for otp_verification
+        scenarios.put("Valid OTP and Data",
+                "{ \"user_name\": \"rickkky\", \"email\": \"rickyratnani81@gmail.com\", \"first_name\": \"Amar\", " +
+                        "\"password\": \"willTop2023\", \"rollNum\": \"IMT2021030\", \"otp\": \"" + correctOtpStr
+                        + "\" }");
+        scenarios.put("Invalid OTP",
+                "{ \"user_name\": \"rickkky\", \"email\": \"rickyratnani81@gmail.com\", \"first_name\": \"Amar\", " +
+                        "\"password\": \"willTop2023\", \"rollNum\": \"IMT2021030\", \"otp\": \"123456\" }");
+        scenarios.put("Missing OTP",
+                "{ \"user_name\": \"rickkky\", \"email\": \"rickyratnani81@gmail.com\", \"first_name\": \"Amar\", " +
+                        "\"password\": \"willTop2023\", \"rollNum\": \"IMT2021030\" }");
+        scenarios.put("Invalid Email Format",
+                "{ \"user_name\": \"rickkky\", \"email\": \"rickyratnani81@\", \"first_name\": \"Amar\", " +
+                        "\"password\": \"willTop2023\", \"rollNum\": \"IMT2021030\", \"otp\": \"" + correctOtpStr
+                        + "\" }");
+        scenarios.put("Missing Roll Number",
+                "{ \"user_name\": \"rickkky\", \"email\": \"rickyratnani81@gmail.com\", \"first_name\": \"Amar\", " +
+                        "\"password\": \"willTop2023\", \"otp\": \"" + correctOtpStr + "\" }");
+
+        for (Map.Entry<String, String> entry : scenarios.entrySet()) {
+            String scenario = entry.getKey();
+            String requestBody = entry.getValue();
+
+            System.out.println("Scenario: " + scenario);
+
+            Response response = RestAssured.given()
+                    .header("Content-Type", "application/json")
+                    .body(requestBody)
+                    .post(endpoint);
+
+            // Print response details
+            System.out.println("Status Code: " + response.getStatusCode());
+            System.out.println("Response Body: " + response.getBody().asString());
+            printDashedLine(60);
+        }
+    }

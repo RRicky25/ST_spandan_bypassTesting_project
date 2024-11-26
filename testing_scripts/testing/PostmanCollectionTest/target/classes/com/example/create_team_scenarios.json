@@ -1,0 +1,71 @@
+{
+    "testCases": [
+      {
+        "scenario": "Valid Request",
+        "requestBody": {
+          "name": "blasters",
+          "sports": "Badminton-MS",
+          "members": [
+            {
+              "email": "ricky.ratnani@iiitb.ac.in",
+              "user_name": "Ricky Ashokkumar Ratnani",
+              "gender": "m",
+              "rollNum": "IMT2021030",
+              "id": 334,
+              "sex": "male"
+            }
+          ],
+          "team_size": 1,
+          "phoneNum": "9429525818"
+        }
+      },
+      {
+        "scenario": "Missing Team Name",
+        "requestBody": {
+          "sports": "Badminton-MS",
+          "members": [
+            {
+              "email": "ricky.ratnani@iiitb.ac.in",
+              "user_name": "Ricky Ashokkumar Ratnani",
+              "gender": "m",
+              "rollNum": "IMT2021030",
+              "id": 334,
+              "sex": "male"
+            }
+          ],
+          "team_size": 1,
+          "phoneNum": "9429525818"
+        }
+      },
+      {
+        "scenario": "Negative team size",
+        "requestBody": {
+          "name": "blasters",
+          "sports": "Badminton-MS",
+          "members": [
+            {
+              "email": "ricky.ratnani@iiitb.ac.in",
+              "user_name": "Ricky Ashokkumar Ratnani",
+              "gender": "m",
+              "rollNum": "IMT2021030",
+              "id": 334,
+              "sex": "male"
+            }
+          ],
+          "team_size": -1,
+          "phoneNum": "9429525818"
+        }
+      },
+      {
+        "scenario": "No member in team",
+        "requestBody": {
+          "name": "blasters",
+          "sports": "Badminton-MS",
+          "members": [],
+          "team_size": 1,
+          "phoneNum": "9429525818"
+        }
+      }
+    ]
+  }
+  
